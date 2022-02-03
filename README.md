@@ -21,7 +21,7 @@ dotnet run
 http://localhost:5000/swagger/index.html
 ```
 
- ![alt text](https://ibb.co/fq6xrJF)
+ ![alt text](https://i.ibb.co/tQjJYRK/1.png)
 
 ## 🛠️ Construído
 
