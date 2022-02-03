@@ -2,9 +2,6 @@
 
 * [Ver Projeto](https://github-api-users-desafio.web.app)
 
-Desafio proposto para consumir API de usuários do Github utilizando framework Angular v11.
-
-O projeto tem como intuito desafiar habilidades de front-end consumindo a API listando os usuários trazendo suas respectivas informações
 
 ## 🚀 Começando
 
