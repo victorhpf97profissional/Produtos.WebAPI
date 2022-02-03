@@ -1,7 +1,5 @@
 # WebAPi Gestão de produtos
 
-* [Ver Projeto](https://github-api-users-desafio.web.app)
-
 
 ## 🚀 Começando
 
