@@ -37,9 +37,9 @@ namespace Produtos.Infra.Repositorios
             Contexto?.Dispose();
         }
 
-        public async Task Excluir(int id)
+        public async Task Excluir(Fornecedor fornecedor)
         {
-            Contexto.Remove(id);
+            Contexto.Remove(fornecedor);
             await SaveChanges();
         }
 

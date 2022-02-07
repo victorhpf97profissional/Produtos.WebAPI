@@ -10,7 +10,6 @@ namespace Produtos.WebApi.ModelsViews
 {
     public class ProdutoModelView
     {
-
         public ProdutoModelView() { }
    
         [Key]

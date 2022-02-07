@@ -81,11 +81,10 @@ namespace Produtos.WebApi.Controllers
         {
             try
             {
-                await _fornecedorServico.Excluir(id);
 
-                var fornecedorEncontrado = _autoMapper.Map<FornecedorModelView>(await _fornecedorServico.ObterFornecedor(id));
+                var fornecedorEncontrado = await _fornecedorServico.ObterFornecedor(id);
                 if (fornecedorEncontrado == null) return NotFound("Fornecedor não encontrado");
-                await _fornecedorServico.Excluir(id);
+                await _fornecedorServico.Excluir(fornecedorEncontrado);
                 return Ok();
             }
             catch (Exception ex)

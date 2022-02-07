@@ -39,9 +39,9 @@ namespace Produtos.Domain.Servicos
 
         }
 
-        public async Task Excluir(int id)
+        public async Task Excluir(Fornecedor fornecedor)
         {
-            await _repositorio.Excluir(id);
+            await _repositorio.Excluir(fornecedor);
 
         }
 

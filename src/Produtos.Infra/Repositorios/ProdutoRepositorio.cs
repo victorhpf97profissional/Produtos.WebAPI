@@ -32,7 +32,6 @@ namespace Produtos.Infra.Repositorios
             await SaveChanges();
         }
 
-   
         public async Task Excluir(Produto produto)
         {
             Contexto.Remove(produto);
@@ -53,10 +52,7 @@ namespace Produtos.Infra.Repositorios
         {
             IQueryable<Produto> query = Contexto.Produtos;
 
-            query = query.AsNoTracking()
-                .Include(a => a.Fornecedor);
-
-
+            query = query.AsNoTracking().Include(a => a.Fornecedor);
 
             if (!string.IsNullOrEmpty(paginaParametros.Descricao))
             {
@@ -80,7 +76,6 @@ namespace Produtos.Infra.Repositorios
         {
             Contexto?.Dispose();
         }
-
 
         public async Task<int> SaveChanges()
         {

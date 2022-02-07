@@ -18,7 +18,7 @@ namespace Produtos.Domain.Interfaces
 
         Task Atualizar(Fornecedor fornecedor);
 
-        Task Excluir(int id);
+        Task Excluir(Fornecedor fornecedor);
 
 
     }

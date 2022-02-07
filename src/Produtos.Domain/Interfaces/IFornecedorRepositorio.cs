@@ -13,7 +13,7 @@ namespace Produtos.Domain.Interfaces
         Task<Fornecedor> ObterPorId(int id);
         Task<List<Fornecedor>> ObterTodos();
         Task Atualizar(Fornecedor fornecedor);
-        Task Excluir(int id);
+        Task Excluir(Fornecedor fornecedor);
         Task<int> SaveChanges();
 
         }
