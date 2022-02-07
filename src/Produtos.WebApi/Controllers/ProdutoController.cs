@@ -26,7 +26,6 @@ namespace Produtos.WebApi.Controllers
 			_autoMapper = autoMapper;
 		}
 
-
 		[HttpGet]
 		public async Task<IActionResult> Get()
 		{
@@ -62,8 +61,6 @@ namespace Produtos.WebApi.Controllers
 		{
 			var produtos = await _produtoServico.ObterPorPaginacao(paginaParametros);
 			var produtoConvertido = _autoMapper.Map<List<ProdutoModelView>>(produtos);
-			//    var resultados = new Paginacao<ProdutoModelView>(produtoConvertido, produtos.QuantidadeTotal, produtos.PaginaAtual, produtos.PaginaTamanho);
-			//var resultados = { itens = produtoConvertido, pagina = produtos.PaginaAtual, paginaTamanho = produtos.PaginaTamanho };
 
 			var resultados = new ResultadoPaginadoModelView<ProdutoModelView>();
 			resultados.Itens = produtoConvertido;
@@ -71,7 +68,6 @@ namespace Produtos.WebApi.Controllers
 			resultados.PaginaTamanho = produtos.PaginaTamanho;
 			resultados.QuantidadeTotal = produtos.QuantidadeTotal;
 			resultados.TotalPaginas = produtos.TotalPaginas;
-
 
 			return Ok(resultados);
 		}
