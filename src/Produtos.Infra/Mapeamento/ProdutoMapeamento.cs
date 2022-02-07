@@ -18,9 +18,7 @@ namespace Produtos.Infra.Mapeamento
             builder.Property(a => a.DataFabricacao).HasColumnType("datetime");
             builder.Property(a => a.DataValidade).HasColumnType("datetime");
             builder.Property(a => a.SituacaoProduto).HasColumnType("int(1)");
-
-
-            builder.ToTable("Fornecedores").Property(a => a.Id).ValueGeneratedOnAdd();
+            builder.ToTable("Produtos").Property(a => a.Id).ValueGeneratedOnAdd();
 
 
         }

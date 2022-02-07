@@ -15,7 +15,5 @@ namespace Produtos.Infra.Contexto
         public DbSet<Fornecedor> Fornecedores { get; set; }
         public DbSet<Produto> Produtos { get; set; }
 
-
-
     }
 }

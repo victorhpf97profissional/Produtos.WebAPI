@@ -15,8 +15,6 @@ namespace Produtos.WebApi.AutoMapper
         {
             CreateMap<Fornecedor, FornecedorModelView>().ReverseMap();
             CreateMap<Produto, ProdutoModelView>().ReverseMap();
-
-
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using Produtos.Domain.Models;
 
@@ -12,7 +13,6 @@ namespace Produtos.WebApi.ModelsViews
 
         public ProdutoModelView() { }
    
-
         [Key]
         public int Id { get; set; }
 

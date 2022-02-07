@@ -1,4 +1,5 @@
 ﻿using Produtos.Domain.Models;
+using Produtos.Domain.Paginacao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace Produtos.Domain.Interfaces
     {
         Task Adicionar(Produto produto);
         Task<Produto> ObterPorId(int id);
+        Task<Paginacao<Produto>> ObterPorPaginacao(PaginaParametros paginaParametros);
         Task<List<Produto>> ObterTodos();
         Task Atualizar(Produto produto);
         Task Excluir(Produto produto);

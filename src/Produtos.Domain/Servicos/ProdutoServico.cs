@@ -1,5 +1,6 @@
 ﻿using Produtos.Domain.Interfaces;
 using Produtos.Domain.Models;
+using Produtos.Domain.Paginacao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,11 +24,16 @@ namespace Produtos.Domain.Servicos
             return await _repositorio.ObterPorId(id);
         }
 
+        public async Task<Paginacao<Produto>> ObterPorPaginacao(PaginaParametros paginaParametros)
+        {
+            return await _repositorio.ObterPorPaginacao(paginaParametros);
+        }
+        
         public async Task<List<Produto>> ObterTodosProdutos()
         {
             return await _repositorio.ObterTodos();
         }
-
+  
         public async Task Adicionar(Produto produto)
         {
             await _repositorio.Adicionar(produto);
@@ -70,5 +76,7 @@ namespace Produtos.Domain.Servicos
         {
             throw new NotImplementedException();
         }
+
+      
     }
 }

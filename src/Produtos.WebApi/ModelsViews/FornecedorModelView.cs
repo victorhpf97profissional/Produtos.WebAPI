@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using Produtos.Domain.Models;
 
 namespace Produtos.WebApi.ModelsViews
@@ -19,6 +20,8 @@ namespace Produtos.WebApi.ModelsViews
         [Required(ErrorMessage = "O campo {0} é de preenchimento obrigatório")]
         [StringLength(14, ErrorMessage = "O {0} deve ter {2} caracteres", MinimumLength = 14)]
         public string Cnpj { get; set; }
+        public  IEnumerable<ProdutoModelView> Produtos { get; set; }
+
 
     }
 }

@@ -30,26 +30,23 @@ namespace Produtos.Domain.Servicos
         public async Task Adicionar(Fornecedor fornecedor)
         {
             await _repositorio.Adicionar(fornecedor);
-
         }
 
         public async Task Atualizar(Fornecedor fornecedor)
         {
 
-             await _repositorio.Atualizar(fornecedor);
+            await _repositorio.Atualizar(fornecedor);
 
         }
 
         public async Task Excluir(int id)
         {
-
             await _repositorio.Excluir(id);
 
         }
 
         public void Dispose()
         {
-
             _repositorio.Dispose();
 
 

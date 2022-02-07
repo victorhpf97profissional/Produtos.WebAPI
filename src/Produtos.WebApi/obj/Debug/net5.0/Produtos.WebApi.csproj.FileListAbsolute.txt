@@ -66,3 +66,7 @@ C:\Users\Conesoft\Desktop\pasta victor\Projetos Software\.NET\DESAFIO AUTOGLASS\
 C:\Users\Conesoft\Desktop\pasta victor\Projetos Software\.NET\DESAFIO AUTOGLASS\src\Produtos.WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Conesoft\Desktop\pasta victor\Projetos Software\.NET\DESAFIO AUTOGLASS\src\Produtos.WebApi\bin\Debug\net5.0\AutoMapper.dll
 C:\Users\Conesoft\Desktop\pasta victor\Projetos Software\.NET\DESAFIO AUTOGLASS\src\Produtos.WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Conesoft\Desktop\pasta victor\Projetos Software\.NET\DESAFIO AUTOGLASS\src\Produtos.WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Conesoft\Desktop\pasta victor\Projetos Software\.NET\DESAFIO AUTOGLASS\src\Produtos.WebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Conesoft\Desktop\pasta victor\Projetos Software\.NET\DESAFIO AUTOGLASS\src\Produtos.WebApi\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Conesoft\Desktop\pasta victor\Projetos Software\.NET\DESAFIO AUTOGLASS\src\Produtos.WebApi\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

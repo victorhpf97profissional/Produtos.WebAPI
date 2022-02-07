@@ -59,21 +59,6 @@ namespace Produtos.WebApi.Controllers
             }
         }
 
-        [HttpGet("pagianacao/{numeroPagina:int}")]
-        public IActionResult GetPagina(int numeroPagina)
-        {
-            try
-            {
-
-                var fornecedoresPorPagina = _contexto.Fornecedores.GetPaged(numeroPagina, 10);
-                return Ok(fornecedoresPorPagina);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
         [HttpPut]
         public async Task<IActionResult> Put([FromBody] FornecedorModelView fornecedor)
         {
@@ -117,7 +102,7 @@ namespace Produtos.WebApi.Controllers
                 if (!ModelState.IsValid) return BadRequest(ModelState.Values);
                 var tpFornecedor = _autoMapper.Map<Fornecedor>(fornecedor);
                 await _fornecedorServico.Adicionar(tpFornecedor);
-                return Ok(fornecedor);
+                return Ok(tpFornecedor);
             }
             catch (Exception ex)
             {

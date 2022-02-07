@@ -10,8 +10,8 @@ using Produtos.Infra.Contexto;
 namespace Produtos.WebApi.Migrations
 {
     [DbContext(typeof(DbContexto))]
-    [Migration("20220202182417_autoIncrement")]
-    partial class autoIncrement
+    [Migration("20220203234401_novo")]
+    partial class novo
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

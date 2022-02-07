@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Produtos.Domain.Models;
-using Produtos.Domain.Utils;
+using Produtos.Domain.Paginacao;
 
 namespace Produtos.Domain.Interfaces
 {
@@ -16,6 +16,7 @@ namespace Produtos.Domain.Interfaces
         Task<Produto> ObterProduto(int id);
 
         Task<List<Produto>> ObterTodosProdutos();
+        Task<Paginacao<Produto>> ObterPorPaginacao(PaginaParametros paginaParametros);
 
         Task Adicionar(Produto produto);
 

@@ -32,6 +32,8 @@ namespace Produtos.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             //Configurando conex�o com o banco de dados
             services.AddDbContext<DbContexto>(opcoes => opcoes.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), x => x.MigrationsAssembly("Produtos.WebApi")));
 
@@ -45,19 +47,23 @@ namespace Produtos.WebApi
             services.AddScoped<IProdutoServico, ProdutoServico>();
             services.AddScoped<IFornecedorServico, FornecedorServico>();
 
-
-
-
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options =>
+                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
+         
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Produtos.WebApi", Version = "v1" });
             });
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(a => a.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -65,11 +71,13 @@ namespace Produtos.WebApi
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Produtos.WebApi v1"));
             }
 
-            // app.UseHttpsRedirection();
+
+
 
             app.UseRouting();
-
-            // app.UseAuthorization();
+            app.UseAuthorization();
+            //   app.UseCors("CorsPolicy");
+            app.UseHttpsRedirection();
 
             app.UseEndpoints(endpoints =>
             {

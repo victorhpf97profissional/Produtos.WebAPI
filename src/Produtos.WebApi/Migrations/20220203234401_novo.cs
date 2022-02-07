@@ -2,7 +2,7 @@
 
 namespace Produtos.WebApi.Migrations
 {
-    public partial class autoIncrement : Migration
+    public partial class novo : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
